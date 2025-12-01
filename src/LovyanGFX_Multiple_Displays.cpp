@@ -136,9 +136,12 @@ void loop()
   // tft1.setTextColor(TFT_WHITE);
   // tft1.drawString("Display 1", 80, 110);
 
-  for (int i = 1; i <= 10; ++i)
+  tft1.clear();
+  tft1.fillRect(0, 50, DISPLAY_WIDTH, DISPLAY_HEIGHT - 100 , TFT_RED);
+
+  for (int i = 1; i <= 100; ++i)
   {
-    Serial.println(i); // или используйте другой код вместо вывода
+    tft1.scroll(0, -10);
   }
 
   /*
